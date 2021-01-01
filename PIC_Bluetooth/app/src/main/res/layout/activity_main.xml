@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TableLayout
+        android:id="@+id/tableLay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/constTwo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/constTwo">
+
+        <TableRow
+            android:id="@+id/rowOne"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:id="@+id/textLabelClear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/clear"
+                android:layout_weight="1"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/textLabelRed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/red"
+                android:layout_weight="1"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/textLabelGreen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/green"
+                android:layout_weight="1"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/textLabelBlue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/blue"
+                android:layout_weight="1"
+                android:textAlignment="center"/>
+
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowTwo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:id="@+id/textClear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/_0"
+                android:layout_weight="1"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/textRed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/_0"
+                android:layout_weight="1"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/textGreen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/_0"
+                android:layout_weight="1"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/textBlue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/_0"
+                android:layout_weight="1"
+                android:textAlignment="center"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constTwo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="8"
+        app:layout_constraintTop_toBottomOf="@id/tableLay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintVertical_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/edit_border"
+            app:srcCompat="@android:drawable/screen_background_dark"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/textLog"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/textLog"
+            android:contentDescription="@string/detected_color" />
+
+        <TextView
+            android:id="@+id/textLogLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/bluetooth_logger"
+            app:layout_constraintStart_toStartOf="@id/textLog"
+            app:layout_constraintTop_toBottomOf="@id/imageView"
+            app:layout_constraintBottom_toTopOf="@id/textLog"/>
+
+        <TextView
+            android:id="@+id/textLog"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintVertical_weight="2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/edit_border"
+            android:scrollbars = "vertical"
+            app:layout_constraintTop_toBottomOf="@id/imageView"
+            app:layout_constraintBottom_toTopOf="@id/buttonConn"
+            app:layout_constraintStart_toStartOf="@id/imageView"
+            app:layout_constraintEnd_toEndOf="@id/imageView"
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor" />
+
+        <Button
+            android:id="@+id/buttonConn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/connect"
+            android:layout_margin="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/imageView"/>
+
+        <Button
+            android:id="@+id/buttonClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clear_log"
+            android:layout_margin="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/imageView"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

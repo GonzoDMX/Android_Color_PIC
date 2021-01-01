@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">PIC_Bluetooth</string>
+    <string name="blue">BLUE</string>
+    <string name="green">GREEN</string>
+    <string name="alpha">ALPHA</string>
+    <string name="red">RED</string>
+    <string name="detected_color">Detected Color</string>
+    <string name="connect">Connect</string>
+    <string name="bluetooth_logger">Bluetooth Logger</string>
+    <string name="clear">CLEAR</string>
+    <string name="_0">0</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="clear_log">Clear Log</string>
+</resources>
